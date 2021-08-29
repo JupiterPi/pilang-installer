@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace pilang_installer
 {
@@ -47,9 +48,10 @@ namespace pilang_installer
             pathChangeButton.Text = strings.BTN_CHANGE;
             pathChangeButton.Location = new System.Drawing.Point(12, 12+ 60 +12);
             pathChangeButton.Size = new System.Drawing.Size(75, 30);
+            pathChangeButton.Click += new EventHandler(pathChangeButton_Click);
 
             pathLabel = new Label();
-            pathLabel.Text = strings.INSTALLATION_PATH;
+            pathLabel.Text = String.Format(strings.INSTALLATION_PATH, installationPath);
             pathLabel.Location = new System.Drawing.Point(12+ 75 +12, 12+ 60 +12 +4);
             pathLabel.Size = new System.Drawing.Size(475, 30);
 
@@ -62,6 +64,11 @@ namespace pilang_installer
             this.Controls.Add(statusLabel);
             this.Controls.Add(pathChangeButton);
             this.Controls.Add(pathLabel);
+        }
+
+        private void refreshInstallationPath()
+        {
+            pathLabel.Text = String.Format(strings.INSTALLATION_PATH, installationPath);
         }
     }
 }

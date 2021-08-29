@@ -16,5 +16,19 @@ namespace pilang_installer
         {
             InitializeComponent();
         }
+
+        private string installationPath = Environment.GetEnvironmentVariable("USERPROFILE");
+        
+        private void pathChangeButton_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+            {
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    installationPath = dialog.SelectedPath;
+                }
+                refreshInstallationPath();
+            }
+        }
     }
 }
