@@ -35,12 +35,13 @@ namespace pilang_installer
             startButton.Text = strings.BTN_INSTALL;
             startButton.Location = new System.Drawing.Point(12, 12);
             startButton.Size = new System.Drawing.Size(150, 60);
+            startButton.Click += new EventHandler(startButton_Click);
 
             statusLabel = new Label();
             statusLabel.Text = strings.WELCOME;
-            statusLabel.Text = strings.STEP_DIRECTORY;
+            /*statusLabel.Text = strings.STEP_DIRECTORY;
             statusLabel.Text = strings.STEP_REGISTRY;
-            statusLabel.Text = strings.FINISHED;
+            statusLabel.Text = strings.FINISHED;*/
             statusLabel.Location = new System.Drawing.Point(12+ 150 +12, 12);
             statusLabel.Size = new System.Drawing.Size(400, 60);
 
