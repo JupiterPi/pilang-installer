@@ -31,25 +31,25 @@ namespace pilang_installer
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             startButton = new Button();
-            startButton.Text = "Install";
+            startButton.Text = strings.BTN_INSTALL;
             startButton.Location = new System.Drawing.Point(12, 12);
             startButton.Size = new System.Drawing.Size(150, 60);
 
             statusLabel = new Label();
-            statusLabel.Text = "Press 'Install' to install pilang on this machine. You can change the installation path below.";
-            statusLabel.Text = "Creating and filling runtime directory...";
-            statusLabel.Text = "Referencing runtime in system registry...";
-            statusLabel.Text = "Finished installing successfully! For the changes to take effect, (re)open all running terminal instances. You can close this window now.";
+            statusLabel.Text = strings.WELCOME;
+            statusLabel.Text = strings.STEP_DIRECTORY;
+            statusLabel.Text = strings.STEP_REGISTRY;
+            statusLabel.Text = strings.FINISHED;
             statusLabel.Location = new System.Drawing.Point(12+ 150 +12, 12);
             statusLabel.Size = new System.Drawing.Size(400, 60);
 
             pathChangeButton = new Button();
-            pathChangeButton.Text = "(change)";
+            pathChangeButton.Text = strings.BTN_CHANGE;
             pathChangeButton.Location = new System.Drawing.Point(12, 12+ 60 +12);
             pathChangeButton.Size = new System.Drawing.Size(75, 30);
 
             pathLabel = new Label();
-            pathLabel.Text = "Installation path: C:\\Users\\<user>\\pilang";
+            pathLabel.Text = strings.INSTALLATION_PATH;
             pathLabel.Location = new System.Drawing.Point(12+ 75 +12, 12+ 60 +12 +4);
             pathLabel.Size = new System.Drawing.Size(475, 30);
 
