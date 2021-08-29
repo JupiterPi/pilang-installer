@@ -16,11 +16,13 @@ namespace pilang_installer
             base.Dispose(disposing);
         }
 
+        private Strings strings = new EnglishStrings();
+
         private Button startButton;
         private Label statusLabel;
         private Button pathChangeButton;
         private Label pathLabel;
-        
+
         private void InitializeComponent()
         {
             this.MinimizeBox = false;
@@ -35,9 +37,9 @@ namespace pilang_installer
 
             statusLabel = new Label();
             statusLabel.Text = "Press 'Install' to install pilang on this machine. You can change the installation path below.";
-            /*statusLabel.Text = "Creating and filling runtime directory...";
+            statusLabel.Text = "Creating and filling runtime directory...";
             statusLabel.Text = "Referencing runtime in system registry...";
-            statusLabel.Text = "Finished installing successfully! For the changes to take effect, (re)open all running terminal instances. You can close this window now.";*/
+            statusLabel.Text = "Finished installing successfully! For the changes to take effect, (re)open all running terminal instances. You can close this window now.";
             statusLabel.Location = new System.Drawing.Point(12+ 150 +12, 12);
             statusLabel.Size = new System.Drawing.Size(400, 60);
 
